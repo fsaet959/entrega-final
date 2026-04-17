@@ -2,14 +2,19 @@
 @use "base/reset";
 @use "base/typography";
 
+// utilities 
+@use "utilities/variables";
+@use "utilities/mixins" ;
+
+// components
+@use "components/buttons"; 
+
 // layout
 
 @use "layout/navbar"; 
 @use "layout/footer";
 
-// utilities 
-@use "utilities/variables";
-@use "utilities/mixins" ;
+
 
 // pages
 

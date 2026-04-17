@@ -73,25 +73,6 @@
 
     }
 
-    // boton principal
-
-    .btn-hero {
-        background-color: $blue-arg ;
-        color: $white-soft;
-        padding: 0.9rem;
-        font-size: 1.1rem;
-        border-radius: 50px;
-        border: none;
-        transition: 0.3s ease;
-        
-
-        &:hover {
-            background-color: $gold-arg;
-            color: $blue-dark ;
-            transform: translateY(-3px);
-            box-shadow: $shadow-hover
-        }
-    }
 
     // responsive 
 

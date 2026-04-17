@@ -1,0 +1,49 @@
+@use "../utilities/variables" as *; 
+
+
+// estilo para botones
+
+
+.btn-hero {
+        background-color: $blue-arg ;
+        color: $white-soft;
+        padding: 0.9rem;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        border: none;
+        transition: 0.3s ease;
+        
+
+        &:hover {
+            background-color: $gold-arg;
+            color: $blue-dark ;
+            transform: translateY(-3px);
+            box-shadow: $shadow-hover
+        }
+   }
+
+// botones de compra
+
+ .btn-producto {
+    @extend .btn-hero;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center; 
+  }
+
+  // botones de carousel 
+
+  .btn-carousel {
+   @extend .btn-hero;
+   padding: 0.4rem 0.9rem;
+   font-size: 0.8rem;
+   border-radius: 12px; 
+  
+ }
+
+
+
+
+
+
