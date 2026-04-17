@@ -140,7 +140,7 @@ h1, h2, h3, h4 {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .navbar.navbar-transparent {
-  background-color: rgba(16, 203, 228, 0.185);
+  background-color: rgba(20, 163, 182, 0.432);
   box-shadow: none;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
