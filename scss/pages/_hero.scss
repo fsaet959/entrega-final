@@ -1,0 +1,131 @@
+@use "../utilities/variables" as * ;
+@use "../utilities/mixins" as * ; 
+
+
+#hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    color: $white-soft;
+    padding: $section-padding;
+    overflow: hidden; 
+    font-family: $font-main;
+    
+    // centrado del contenido
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // video
+
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        min-width: 100%; 
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 1; 
+        object-fit: cover; 
+    }
+
+    //  overlay (Capa intermedia para oscurecer)
+
+    &::before {
+        content: ""; 
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 2; 
+    }
+
+    // contenido 
+    .container {
+        position: relative;
+        z-index: 3; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+
+        animation: fadeUp 1.2s ease forwards;
+    }
+
+    .hero-logo {
+            width: 300px; 
+            height: auto;
+            margin-bottom: 2rem; 
+            filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.3)); 
+        
+        }
+
+    p {
+    
+        font-size: 1.3rem;
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+        color: $white-soft
+        
+
+    }
+
+    // boton principal
+
+    .btn-hero {
+        background-color: $blue-arg ;
+        color: $white-soft;
+        padding: 0.9rem;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        border: none;
+        transition: 0.3s ease;
+        
+
+        &:hover {
+            background-color: $gold-arg;
+            color: $blue-dark ;
+            transform: translateY(-3px);
+            box-shadow: $shadow-hover
+        }
+    }
+
+    // responsive 
+
+    // tablet
+
+    @media (max-width: 768px) {
+        #hero h1 {
+            font-size: 2.8rem;
+        }
+
+        #hero p {
+            font-size: 1.1rem;
+        }
+    }
+
+    // mobile 
+
+    @media (max-width: 576px) {
+        #hero  h1 {
+            font-size: 2.2rem;
+        }
+        #hero p {
+            font-size: 2.2rem;  
+        } 
+        .hero-logo {
+            display: none;
+        }
+        
+    }
+
+
+     
+
+
+   
+
+}

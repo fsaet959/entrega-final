@@ -1,0 +1,55 @@
+@use "../utilities/variables" as *;
+
+// nosotros
+
+#nosotros {
+    background-color: $white-soft;
+    padding: 5rem 0;
+
+    .nosotros-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    h2 {
+        font-family: $font-main;
+        font-size: 2.4rem;
+        color: $blue-dark;
+        margin-bottom: 1.5rem;
+    }
+
+    p{
+        font-size: 1.1rem;
+        color: $gray-dark;
+        margin-bottom: 1rem;
+        line-height: 1.7;
+    }
+
+    .nosotros-img img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: $shadow-soft;
+        object-fit: cover;
+    }
+}
+
+// responsive
+
+// tablets y mobile
+
+@media (max-width: 768px) {
+    #nosotros .nosotros-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    #nosotros h2 {
+        font-size: 2rem;
+    }
+
+    #nosotros p {
+        font-size: 1rem;
+    }
+}

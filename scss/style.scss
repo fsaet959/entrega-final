@@ -1,0 +1,22 @@
+// base
+@use "base/reset";
+@use "base/typography";
+
+// layout
+
+@use "layout/navbar"; 
+@use "layout/footer";
+
+// utilities 
+@use "utilities/variables";
+@use "utilities/mixins" ;
+
+// pages
+
+@use "pages/hero";
+@use "pages/products";
+@use "pages/nosotros";
+@use "pages/contacto";
+
+
+

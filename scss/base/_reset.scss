@@ -1,0 +1,51 @@
+
+@use "../utilities/variables" as *;
+
+// reset
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: $gold-arg;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+section{
+    padding: $section-padding
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}

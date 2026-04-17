@@ -1,0 +1,88 @@
+@use "../utilities/variables" as *;
+
+// contacto 
+
+#contacto {
+    background-color: $white-soft;
+    padding: 5rem 0;
+
+    .contacto-container {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h2{
+        font-family: $font-main;
+        font-size: 2.4rem;
+        color: $blue-dark;
+        margin-bottom: 1rem;
+    }
+
+    .contacto-descripcion {
+        font-size: 1.1rem;
+        color: $gray-dark;
+        margin-bottom: 2.5rem;
+    }
+
+    .contacto-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .form-group {
+        text-align: left;
+        
+        label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            color: $blue-dark;
+            font-weight: 600;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 1px solid $gray-light;
+            border-radius: 6px;
+            background-color: #fff;
+            font-size: 1rem;
+            color: $gray-dark;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+            &:focus {
+                border-color: $blue-arg;
+                box-shadow: 0 0 6px rgba(101, 165, 205, 0.4);
+                outline: none;
+            }
+          }
+        }
+        .btn-enviar {
+            background-color: $blue-dark;
+            color: #fff;
+            padding: 0.9rem 2rem;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+
+            &:hover {
+                background-color: $blue-arg;
+                transform: translateY(-2px);
+            }
+        }
+    }
+
+    // responsive
+
+    @media (max-width: 576px) {
+        #contacto h2 {
+            font-size: 2rem;
+        }
+    
+    #contacto .contacto-descripcion {
+        font-size: 1rem;
+    }
+  }

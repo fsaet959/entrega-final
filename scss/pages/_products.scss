@@ -1,0 +1,118 @@
+@use "../utilities/variables" as *;
+
+// productos 
+
+#productos {
+  padding: 5rem 0;
+  background-color: $white-soft;
+
+  h2 {
+    text-align: center;
+    font-family: $font-main;
+    font-size: 2.4rem;
+    color: $blue-dark;
+    margin-bottom: 3rem;
+  }
+
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .producto-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: $shadow-soft;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-family: $font-main;
+      font-size: 1.4rem;
+      color: $blue-dark;
+      margin-bottom: 0.5rem;
+    }
+
+    .precio {
+      font-size: 1.1rem;
+      color: $gray-dark;
+    }
+  }
+
+  // titulo del carousel 
+  .mas-productos-titulo {
+    text-align: center;
+    font-family: $font-main;
+    font-size: 2rem;
+    color: $blue-dark;
+    margin: 4rem 0 2rem;
+  }
+}
+
+// carousel 
+
+#carouselProductos {
+  .carousel-producto {
+    text-align: center;
+
+    img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 0 auto 1rem;
+      box-shadow: $shadow-soft;
+    }
+
+    h4 {
+      font-family: $font-main;
+      font-size: 1.3rem;
+      color: $blue-dark;
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $gray-dark;
+    }
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1);
+  }
+}
+
+//  responsive
+
+@media (max-width: 992px) {
+  #productos .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  #productos .productos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #carouselProductos img {
+    width: 200px;
+    height: 200px;
+  }
+}

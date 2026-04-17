@@ -1,0 +1,451 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #E8C547;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "New Spirit";
+  src: url("../fonts/new-spirit.woff2") format("woff2"), url("../fonts/new-spirit.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #6E7A85;
+}
+
+h1, h2, h3, h4 {
+  font-family: "New Spirit", serif;
+  color: #1F3A4D;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar.navbar-transparent {
+  background-color: rgba(16, 203, 228, 0.185);
+  box-shadow: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.navbar .navbar-brand {
+  font-family: "New Spirit", serif;
+  font-size: 1.8rem;
+  color: white;
+  letter-spacing: 1px;
+}
+.navbar .nav-link {
+  color: white;
+  font-size: 1rem;
+  margin-left: 1rem;
+  transition: color 0.2s ease;
+}
+.navbar .nav-link:hover {
+  color: #E8C547;
+}
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    margin-left: 0;
+    padding: 0.8rem 0;
+  }
+}
+#footer {
+  background: #1F3A4D;
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+#footer .footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+#footer .footer-brand h3 {
+  font-family: "New Spirit", serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+#footer .footer-brand p {
+  font-size: 1rem;
+  color: #F5F9FC;
+  margin-bottom: 2rem;
+}
+#footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+#footer .footer-links a {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+#footer .footer-links a:hover {
+  color: #E8C547;
+}
+#footer .footer-copy {
+  font-size: 0.9rem;
+  color: #F5F9FC;
+  opacity: 0.8;
+}
+
+@media (max-width: 576px) {
+  #footer .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+#hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  color: #F5F9FC;
+  padding: 5rem 0;
+  overflow: hidden;
+  font-family: "New Spirit", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  object-fit: cover;
+}
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+#hero .container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeUp 1.2s ease forwards;
+}
+#hero .hero-logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+}
+#hero p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: #F5F9FC;
+}
+#hero .btn-hero {
+  background-color: #65A5CD;
+  color: #F5F9FC;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  border: none;
+  transition: 0.3s ease;
+}
+#hero .btn-hero:hover {
+  background-color: #E8C547;
+  color: #1F3A4D;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+@media (max-width: 768px) {
+  #hero #hero h1 {
+    font-size: 2.8rem;
+  }
+  #hero #hero p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 576px) {
+  #hero #hero h1 {
+    font-size: 2.2rem;
+  }
+  #hero #hero p {
+    font-size: 2.2rem;
+  }
+  #hero .hero-logo {
+    display: none;
+  }
+}
+
+#productos {
+  padding: 5rem 0;
+  background-color: #F5F9FC;
+}
+#productos h2 {
+  text-align: center;
+  font-family: "New Spirit", serif;
+  font-size: 2.4rem;
+  color: #1F3A4D;
+  margin-bottom: 3rem;
+}
+#productos .productos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+#productos .producto-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#productos .producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+#productos .producto-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+#productos .producto-card h3 {
+  font-family: "New Spirit", serif;
+  font-size: 1.4rem;
+  color: #1F3A4D;
+  margin-bottom: 0.5rem;
+}
+#productos .producto-card .precio {
+  font-size: 1.1rem;
+  color: #6E7A85;
+}
+#productos .mas-productos-titulo {
+  text-align: center;
+  font-family: "New Spirit", serif;
+  font-size: 2rem;
+  color: #1F3A4D;
+  margin: 4rem 0 2rem;
+}
+
+#carouselProductos .carousel-producto {
+  text-align: center;
+}
+#carouselProductos .carousel-producto img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+#carouselProductos .carousel-producto h4 {
+  font-family: "New Spirit", serif;
+  font-size: 1.3rem;
+  color: #1F3A4D;
+  margin-bottom: 0.3rem;
+}
+#carouselProductos .carousel-producto p {
+  font-size: 1rem;
+  color: #6E7A85;
+}
+#carouselProductos .carousel-control-prev-icon,
+#carouselProductos .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+@media (max-width: 992px) {
+  #productos .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  #productos .productos-grid {
+    grid-template-columns: 1fr;
+  }
+  #carouselProductos img {
+    width: 200px;
+    height: 200px;
+  }
+}
+#nosotros {
+  background-color: #F5F9FC;
+  padding: 5rem 0;
+}
+#nosotros .nosotros-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+#nosotros h2 {
+  font-family: "New Spirit", serif;
+  font-size: 2.4rem;
+  color: #1F3A4D;
+  margin-bottom: 1.5rem;
+}
+#nosotros p {
+  font-size: 1.1rem;
+  color: #6E7A85;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+#nosotros .nosotros-img img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  #nosotros .nosotros-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  #nosotros h2 {
+    font-size: 2rem;
+  }
+  #nosotros p {
+    font-size: 1rem;
+  }
+}
+#contacto {
+  background-color: #F5F9FC;
+  padding: 5rem 0;
+}
+#contacto .contacto-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+#contacto h2 {
+  font-family: "New Spirit", serif;
+  font-size: 2.4rem;
+  color: #1F3A4D;
+  margin-bottom: 1rem;
+}
+#contacto .contacto-descripcion {
+  font-size: 1.1rem;
+  color: #6E7A85;
+  margin-bottom: 2.5rem;
+}
+#contacto .contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+#contacto .form-group {
+  text-align: left;
+}
+#contacto .form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: #1F3A4D;
+  font-weight: 600;
+}
+#contacto .form-group input,
+#contacto .form-group textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #AEB7BF;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #6E7A85;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+#contacto .form-group input:focus,
+#contacto .form-group textarea:focus {
+  border-color: #65A5CD;
+  box-shadow: 0 0 6px rgba(101, 165, 205, 0.4);
+  outline: none;
+}
+#contacto .btn-enviar {
+  background-color: #1F3A4D;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#contacto .btn-enviar:hover {
+  background-color: #65A5CD;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+  #contacto h2 {
+    font-size: 2rem;
+  }
+  #contacto .contacto-descripcion {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
