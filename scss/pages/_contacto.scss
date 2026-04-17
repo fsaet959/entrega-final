@@ -12,23 +12,22 @@
         text-align: center;
     }
 
-    h2{
-        font-family: $font-main;
-        font-size: 2.4rem;
-        color: $blue-dark;
-        margin-bottom: 1rem;
-    }
+    
 
     .contacto-descripcion {
         font-size: 1.1rem;
         color: $gray-dark;
         margin-bottom: 2.5rem;
+        font-family: $font-main;
     }
 
     .contacto-form {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        font-family: $font-main;
+
+        
     }
     .form-group {
         text-align: left;
@@ -59,25 +58,13 @@
             }
           }
         }
-        .btn-enviar {
-            background-color: $blue-dark;
-            color: #fff;
-            padding: 0.9rem 2rem;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-
-            &:hover {
-                background-color: $blue-arg;
-                transform: translateY(-2px);
-            }
+        
         }
-    }
+    
 
     // responsive
 
-    @media (max-width: 576px) {
+    @media (max-width: 600px) {
         #contacto h2 {
             font-size: 2rem;
         }

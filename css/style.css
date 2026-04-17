@@ -62,7 +62,7 @@ h1, h2, h3, h4 {
   color: #1F3A4D;
 }
 
-.btn-hero, #productos .producto-card .btn-carousel, .btn-carousel, .btn-producto {
+.btn-hero, #productos .producto-card .btn-carousel, .titulo-estilo, .btn-producto {
   background-color: #65A5CD;
   color: #F5F9FC;
   padding: 0.9rem;
@@ -70,8 +70,9 @@ h1, h2, h3, h4 {
   border-radius: 50px;
   border: none;
   transition: 0.3s ease;
+  font-weight: 600;
 }
-.btn-hero:hover, #productos .producto-card .btn-carousel:hover, .btn-carousel:hover, .btn-producto:hover {
+.btn-hero:hover, #productos .producto-card .btn-carousel:hover, .titulo-estilo:hover, .btn-producto:hover {
   background-color: #E8C547;
   color: #1F3A4D;
   transform: translateY(-3px);
@@ -85,10 +86,49 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-.btn-carousel {
-  padding: 0.4rem 0.9rem;
-  font-size: 0.8rem;
-  border-radius: 12px;
+.titulo-estilo {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 30px;
+  cursor: default;
+  pointer-events: none;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 70px;
+  font-weight: 600;
+}
+
+.titulo-centro {
+  text-align: center;
+  margin: 4rem 0 3rem 0;
+}
+
+.btn-visita-tienda, .titulo-contacto {
+  display: block;
+  width: 100%;
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: #65A5CD;
+  color: white;
+  font-size: 1.6rem;
+  font-family: "New Spirit", serif;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-visita-tienda:hover, .titulo-contacto:hover {
+  background-color: #E8C547;
+  color: #65A5CD;
+}
+
+.titulo-contacto {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin: 4rem 0 2rem 0;
+  pointer-events: none;
+  border-radius: 30px;
 }
 
 .navbar {
@@ -104,13 +144,19 @@ h1, h2, h3, h4 {
   box-shadow: none;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(16, 203, 228, 0.185);
+}
+.navbar .navbar-nav .nav-link {
+  font-family: "New Spirit", sans-serif;
+  font-weight: 600;
 }
 .navbar .navbar-brand {
   font-family: "New Spirit", serif;
   font-size: 1.8rem;
   color: white;
   letter-spacing: 1px;
+  padding: 0;
+  margin-right: 1rem;
 }
 .navbar .nav-link {
   color: white;
@@ -127,6 +173,10 @@ h1, h2, h3, h4 {
 .navbar .navbar-toggler:focus {
   box-shadow: none;
 }
+.navbar .logo-nav {
+  height: 25px;
+  width: auto;
+}
 
 @media (max-width: 768px) {
   .nav-link {
@@ -135,9 +185,9 @@ h1, h2, h3, h4 {
   }
 }
 #footer {
-  background: #1F3A4D;
+  background: #65A5CD;
   color: #fff;
-  padding: 3rem 0;
+  padding: 1rem 0;
   text-align: center;
 }
 #footer .footer-container {
@@ -146,14 +196,11 @@ h1, h2, h3, h4 {
 }
 #footer .footer-brand h3 {
   font-family: "New Spirit", serif;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: #fff;
-}
-#footer .footer-brand p {
   font-size: 1rem;
-  color: #F5F9FC;
+  margin-top: 3rem;
   margin-bottom: 2rem;
+  color: #E8C547;
+  font-weight: 600;
 }
 #footer .footer-links {
   display: flex;
@@ -175,7 +222,7 @@ h1, h2, h3, h4 {
   opacity: 0.8;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   #footer .footer-links {
     flex-direction: column;
     gap: 1rem;
@@ -241,7 +288,7 @@ h1, h2, h3, h4 {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   #hero #hero h1 {
     font-size: 2.2rem;
   }
@@ -256,13 +303,6 @@ h1, h2, h3, h4 {
 #productos {
   padding: 5rem 0;
   background-color: #F5F9FC;
-}
-#productos h2 {
-  text-align: center;
-  font-family: "New Spirit", serif;
-  font-size: 2.4rem;
-  color: #1F3A4D;
-  margin-bottom: 3rem;
 }
 #productos .productos-grid {
   display: grid;
@@ -279,7 +319,7 @@ h1, h2, h3, h4 {
 #productos .producto-card img {
   width: 100%;
   display: block;
-  transition: transform 0, 4s ease;
+  transition: transform 0.4s ease;
 }
 #productos .producto-card:hover img {
   transform: scale(1.08);
@@ -298,23 +338,6 @@ h1, h2, h3, h4 {
 #productos .producto-card:hover .btn-carousel {
   opacity: 1;
   transform: translate(-50%, -5px);
-}
-#productos h3 {
-  font-family: "New Spirit", serif;
-  font-size: 1.4rem;
-  color: #1F3A4D;
-  margin-bottom: 0.5rem;
-}
-#productos .precio {
-  font-size: 1.1rem;
-  color: #6E7A85;
-}
-#productos .mas-productos-titulo {
-  text-align: center;
-  font-family: "New Spirit", serif;
-  font-size: 2rem;
-  color: #1F3A4D;
-  margin: 4rem 0 2rem;
 }
 
 #carouselProductos .carousel-producto {
@@ -341,9 +364,30 @@ h1, h2, h3, h4 {
 #carouselProductos .carousel-control-prev-icon,
 #carouselProductos .carousel-control-next-icon {
   filter: invert(1);
+  filter: brightness(0) saturate(100%) invert(86%) sepia(32%) saturate(1294%) hue-rotate(338deg) brightness(96%) contrast(92%);
+  width: 3rem;
+  height: 3rem;
 }
 
-@media (max-width: 992px) {
+#carouselProductos {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#carouselProductos .carousel-producto {
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+#carouselProductos .carousel-producto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
   #productos .productos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -357,7 +401,7 @@ h1, h2, h3, h4 {
     transform: none;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   #productos .productos-grid {
     grid-template-columns: 1fr;
   }
@@ -376,12 +420,6 @@ h1, h2, h3, h4 {
   gap: 3rem;
   align-items: center;
 }
-#nosotros h2 {
-  font-family: "New Spirit", serif;
-  font-size: 2.4rem;
-  color: #1F3A4D;
-  margin-bottom: 1.5rem;
-}
 #nosotros p {
   font-size: 1.1rem;
   color: #6E7A85;
@@ -393,6 +431,9 @@ h1, h2, h3, h4 {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   object-fit: cover;
+}
+#nosotros {
+  font-family: "New Spirit", serif;
 }
 
 @media (max-width: 768px) {
@@ -416,21 +457,17 @@ h1, h2, h3, h4 {
   margin: 0 auto;
   text-align: center;
 }
-#contacto h2 {
-  font-family: "New Spirit", serif;
-  font-size: 2.4rem;
-  color: #1F3A4D;
-  margin-bottom: 1rem;
-}
 #contacto .contacto-descripcion {
   font-size: 1.1rem;
   color: #6E7A85;
   margin-bottom: 2.5rem;
+  font-family: "New Spirit", serif;
 }
 #contacto .contacto-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  font-family: "New Spirit", serif;
 }
 #contacto .form-group {
   text-align: left;
@@ -459,21 +496,8 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 6px rgba(101, 165, 205, 0.4);
   outline: none;
 }
-#contacto .btn-enviar {
-  background-color: #1F3A4D;
-  color: #fff;
-  padding: 0.9rem 2rem;
-  border-radius: 6px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-#contacto .btn-enviar:hover {
-  background-color: #65A5CD;
-  transform: translateY(-2px);
-}
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   #contacto h2 {
     font-size: 2rem;
   }

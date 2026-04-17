@@ -10,7 +10,7 @@
     <meta name="keywords" content="identidad argentina, orgullo argentino, cultura nacional, diseño argentino, regalos con onda">
     <meta name="author" content="Federica">
 
-    <!-- Bootstrap -->
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- CSS -->
@@ -19,13 +19,15 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- header -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-transparent" aria-label="Navegación principal">
       <div class="container">
 
         <!-- LOGO en boton de inicio -->
-        <a class="navbar-brand" href="#hero">Lunfardo</a> 
+        <a class="navbar-brand" href="#hero">
+          <img src="img/lunfardo-logo-blanco.png" alt="Logo Lunfardo" class="logo-nav">
+        </a> 
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
@@ -44,7 +46,7 @@
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- hero -->
 
     <section id="hero" class="d-flex align-items-center justify-content-center text-center">
       <video autoplay muted loop playsinline class="hero-video">
@@ -58,34 +60,39 @@
     </section>
 
 
-  <!-- PRODUCTOS -->
+  <!-- productos -->
   <section id="productos">
-  <div class="container productos-container">
+  <div class="titulo-centro ">
 
-    <h2>Nuestros Productos</h2>
+    <h2 class="titulo-estilo">Nuestros Productos</h2>
 
-    <!-- GRID PRINCIPAL -->
+    <!-- grid ppal -->
     <div class="productos-grid">
 
       <div class="producto-card">
-        <img src="img/firma-diez.jpg" alt="Remera con firma de Maradona" >
-        <a href="#" class="btn-carousel">Comprar</a>
+        <img src="img/firma-diez.jpg" alt="Remera D10S" >
+        <a href="https://somos-lunfardo.com/products/reme-d10s" class="btn-carousel" target="_blank">Comprar</a>
       </div>
 
       <div class="producto-card">
-        <img src="img/malvinas.jpg" alt="Remera Malvinas">
-        <a href="#" class="btn-carousel">Comprar</a>
+        <img src="img/malvinas.jpg" alt="Remera 1982">
+        <a href="https://somos-lunfardo.com/products/reme-1982" class="btn-carousel" target="_blank">Comprar</a>
       </div>
 
       <div class="producto-card">
-        <img src="img/mundo.jpg" alt="Remera centro del mundo">
-        <a href="#" class="btn-carousel">Comprar</a>
+        <img src="img/mundo.jpg" alt="Remera Mapa argento">
+        <a href="https://somos-lunfardo.com/products/reme-mapa-argento" class="btn-carousel" target="_blank">Comprar</a>
       </div>
 
     </div>
 
-    <!-- CAROUSEL DE MÁS PRODUCTOS -->
-    <h3 class="mas-productos-titulo">Más productos</h3>
+    <!-- carousel -->
+
+      <div class="titulo-centro">
+        <a href="https://somos-lunfardo.com/" target="_blank" rel="noopener noreferrer" class="btn-visita-tienda"> Visitá nuestra tienda</a>
+      </div>
+    
+    
 
     <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -134,21 +141,22 @@
 
 
 
-  <!-- NOSOTROS -->
+  <!-- nosotros -->
    <section id="nosotros">
     <div class="container nosotros-container">
     
      <div class="nosotros-texto">
-      <h2>Sobre New Spirit</h2>
+      <h2 class="titulo-estilo">¿De dónde salió Lunfardo? </h2>
       <p>
-        New Spirit nace con la idea de crear moda unisex que celebre la diversidad,
-        la comodidad y la autenticidad. Diseñamos prendas atemporales, minimalistas
-        y versátiles, pensadas para todos los cuerpos y estilos.
+        Hace años que dejamos nuestro país, pero el país nunca nos dejó a nosotros.
+        Lunfardo nació de esa necesidad de acortar distancias,
+        de combatir la nostalgia y de sentir que, aunque estemos lejos, 
+        llevamos lo nuestro a donde sea que vayamos.
+
       </p>
       <p>
-        Creemos en una moda libre de etiquetas, donde cada persona pueda expresarse
-        sin límites. Nuestro compromiso es ofrecer calidad, diseño y una experiencia
-        inclusiva en cada detalle.
+        Creemos en el valor de lo propio y de lo hecho a conciencia.
+         Por eso, nos encargamos de todo el proceso: desde nuestra casa a la tuya.
       </p>
      </div>
 
@@ -159,15 +167,15 @@
      </div>
  </section>
 
-  <!-- CONTACTO -->
+  <!-- contacto -->
 
   <section id="contacto">
   <div class="container contacto-container">
 
-    <h2>Contacto</h2>
+    <h2 class="titulo-contacto">Contacto</h2>
     <p class="contacto-descripcion">
-      ¿Tenés dudas, consultas o querés saber más sobre nuestras prendas?
-      Escribinos y te respondemos a la brevedad.
+      ¿Tenés dudas, consultas o querés saber más sobre nuestro proyecto?
+      Escribinos.
     </p>
 
     <form class="contacto-form">
@@ -186,32 +194,32 @@
         <textarea id="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
       </div>
 
-      <button type="submit" class="btn-enviar">Enviar mensaje</button>
+      <button type="submit" class="btn-hero">Enviar mensaje</button>
     </form>
 
   </div>
 </section>
 
 
-  <!-- FOOTER -->
+  <!-- footer -->
 
  <footer id="footer">
   <div class="container footer-container">
 
     <div class="footer-brand">
-      <h3>New Spirit</h3>
-      <p>Moda unisex. Atemporal. Inclusiva.</p>
+      <h3>Lunfardo - Insoportablemente nosotros</h3>
     </div>
 
     <ul class="footer-links">
       <li>
-        <a href="https://www.instagram.com/tuusuario" target="_blank">
+        <a href="https://www.instagram.com/somos.lunfardo/" target="_blank">
           <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://open.spotify.com/user/pfgonzalez95?si=61b06bb5b1f84537" target= "_blank">
+          <i class="bi bi-spotify" ></i>
         </a>
       </li>
     </ul>
-
-    <p class="footer-copy">© 2024 New Spirit — Todos los derechos reservados.</p>
 
    </div>
   </footer>

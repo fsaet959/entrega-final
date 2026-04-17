@@ -13,13 +13,7 @@
         align-items: center;
     }
 
-    h2 {
-        font-family: $font-main;
-        font-size: 2.4rem;
-        color: $blue-dark;
-        margin-bottom: 1.5rem;
-    }
-
+    
     p{
         font-size: 1.1rem;
         color: $gray-dark;
@@ -33,7 +27,11 @@
         box-shadow: $shadow-soft;
         object-fit: cover;
     }
+
+    font-family: $font-main;
 }
+
+
 
 // responsive
 

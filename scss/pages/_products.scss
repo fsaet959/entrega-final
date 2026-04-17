@@ -7,14 +7,7 @@
   padding: 5rem 0;
   background-color: $white-soft;
 
-  h2 {
-    text-align: center;
-    font-family: $font-main;
-    font-size: 2.4rem;
-    color: $blue-dark;
-    margin-bottom: 3rem;
-  }
-
+ 
   .productos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -22,23 +15,21 @@
   }
 
   .producto-card {
-    position: relative;
-    overflow: hidden;
-    border: none;
-    border-radius: 0;
-    cursor: pointer; 
+      position: relative;
+      overflow: hidden;
+      border: none;
+      border-radius: 0;
+      cursor: pointer; 
 
     img {
       width: 100%;
       display: block;
-      transition: transform 0,4s ease;
-    }
+      transition: transform 0.4s ease; 
+     }
 
-     // img se agranda al pasar el cursor 
-
-    &:hover img {
-      transform: scale(1.08);
-    }
+      &:hover img {
+        transform: scale(1.08);
+      }
 
     // boton oculto
 
@@ -67,27 +58,6 @@
 
     }
 
-    h3 {
-      font-family: $font-main;
-      font-size: 1.4rem;
-      color: $blue-dark;
-      margin-bottom: 0.5rem;
-    }
-
-    .precio {
-      font-size: 1.1rem;
-      color: $gray-dark;
-    }
-  
-
-  // titulo del carousel 
-  .mas-productos-titulo {
-    text-align: center;
-    font-family: $font-main;
-    font-size: 2rem;
-    color: $blue-dark;
-    margin: 4rem 0 2rem;
-  }
 }
 
 // carousel 
@@ -117,16 +87,38 @@
       color: $gray-dark;
     }
   }
-
+   // flechitas del carousel
+   
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     filter: invert(1);
+    filter: brightness(0) saturate(100%) invert(86%) sepia(32%) saturate(1294%) hue-rotate(338deg) brightness(96%) contrast(92%);
+    width: 3rem;
+    height: 3rem;
   }
 }
 
+  #carouselProductos {
+    max-width: 900px;    
+    margin: 0 auto;       
+  }
+
+  #carouselProductos .carousel-producto {
+    height: 800px;       
+    position: relative;
+    overflow: hidden;
+  }
+
+  #carouselProductos .carousel-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+    display: block;
+  }
+
 //  responsive 
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   #productos .productos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -144,7 +136,7 @@
 }
 
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   #productos .productos-grid {
     grid-template-columns: 1fr;
   }

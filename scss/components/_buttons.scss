@@ -12,6 +12,7 @@
         border-radius: 50px;
         border: none;
         transition: 0.3s ease;
+        font-weight: 600;
         
 
         &:hover {
@@ -32,16 +33,11 @@
     text-align: center; 
   }
 
-  // botones de carousel 
-
-  .btn-carousel {
-   @extend .btn-hero;
-   padding: 0.4rem 0.9rem;
-   font-size: 0.8rem;
-   border-radius: 12px; 
   
- }
 
+  
+  
+ 
 
 
 
