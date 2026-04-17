@@ -132,9 +132,13 @@
 
   .producto-card:hover img {
     transform: none; 
-}
-}
+  }
 
+  #carouselProductos .carousel-producto {
+    height: 400px; 
+
+}
+}
 
 @media (max-width: 600px) {
   #productos .productos-grid {
