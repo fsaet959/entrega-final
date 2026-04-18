@@ -30,14 +30,15 @@
         height: auto;
         z-index: 1; 
         object-fit: cover; 
+        
     }
 
     #hero video img {
         width: 100%;
         height: 100%;
         object-fit: cover;    
-        object-position: center 95%; 
         display: block;
+        object-position: center;
         }
 
     //  overlay p oscurecer 
